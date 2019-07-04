@@ -37,7 +37,8 @@
     "webpack": "^1.13.1",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-dev-server": "^1.16.3",
-    "whatwg-fetch": "^1.0.0"
+    "whatwg-fetch": "^1.0.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "babel-core": "^6.11.4",
@@ -90,6 +91,9 @@
     "clean": "node run clean",
     "build": "node run build",
     "build:debug": "node run build --debug",
-    "start": "webpack-dev-server --debug --hot --inline --config ./webpack.config.js"
-  }
+    "start": "webpack-dev-server --debug --hot --inline --config ./webpack.config.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
